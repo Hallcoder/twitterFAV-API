@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url("./imgs/back.png");
+            background-repeat:no-repeat;
+            
+        }
+        #topMost{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width:100%;
+        }
+        .responses{
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            height:38em;
+            border: 2px solid grey;
+            border-radius: 8px;
+            box-shadow: 4px 4px 3px black;
+            overflow: scroll;
+        }
+        #containerDiv{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            height: 70vh;
+            margin: auto;
+            border:2px solid grey;
+            justify-content: space-around;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            border-radius: 8px;
+            box-shadow: 4px 4px 3px black;
+        }
+        strong,h1{
+            color:rgb(97, 27, 163);
+            text-decoration: 2px solid dotted;
+            text-align: center;
+        }
+        #requests{
+            display: flex;
+            flex-direction: column;
+            border:8px solid whitesmoke;
+            box-shadow: 2px 2px 2px black;
+            width: 50%;
+            align-items: center;
+            border-radius: 8px;
+            padding: 15px;
+            position: relative;
+        }
+        #instructions{
+            display: flex;
+            flex-direction: column;
+            border:8px solid whitesmoke;
+            box-shadow: 2px 2px 2px black;
+            width: 50%;
+            align-items: center;
+            justify-content: space-evenly;
+            line-height: 40px;
+            border-radius: 8px;  
+        }
+       #getTweets,#getUsers,#getTweetDetails,#getLinks,#getInfo{
+           width: 100px;
+           height: 40px;
+           font-size: 0.9em;
+           color:rgb(105, 36, 170);
+           background-color: white;
+           border-radius: 7px;  
+           margin: 10px auto 5px auto;
+       }
+       .buttonsGroup:hover{
+        color:white;
+           background-color: rgb(178, 133, 221);
+          
+       }
+       #buttonsInputs{
+        display: flex;
+            flex-direction: column;
+            border:8px solid whitesmoke;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            line-height: 15px;
+       }
+       input{
+           width: 220%;
+           height: 30px;
+           border: 1px solid rgb(97, 27, 163);
+           border-radius: 6px;
+       }
+       ol,ul{
+           font-size: larger;
+           color:black;
+           border-bottom: 2px solid black;
+       }
+       #responsesDiv{
+           margin:20px auto ;
+           overflow: scroll;
+           height: 40em;
+       }
+       tr,td{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* border:2px solid grey;
+        border-collapse: collapse; */
+        width:100%;
+       }
+    </style>
+  
+</head>
+<body>
+    <h1 style="text-align: center;">Twitter Favorites </h1>
+    <div id="topMost">
+        <div id="containerDiv">
+            <div id="instructions">
+                <h1>Instructions</h1>
+                 <ol>
+                     <li>Click <strong>Get Tweets</strong>  to get all Tweets.</li>
+                     <li>Click <strong>Get Users</strong>  to get all users. </li>
+                     <li>Click <strong>Get links</strong>  to get all Links in tweets.</li>
+                     <li>Click <strong>Get Tweet details</strong>  to get all details about a tweet. Sample id:311975360667459585</li>
+                     <li>Click <strong>Get Info</strong>  to get profile info about a user.</li>
+                 </ol>
+                        </div>
+            <div id="requests">
+                
+                    <h1>Tweet API</h1>
+                    <form action="">
+                        <div id="buttonsInputs">
+                        <div><button  id="getTweets">Get Tweets</button></div>
+                        <div><button  id="getUsers">Get Users</button></div>
+                        <div><button  id="getLinks">Get Links</button></div>
+                        <input type="text" name="id" id="IdFormInput">
+                        <div><button  id="getTweetDetails">Get Tweet Details</button></div>
+                        <input type="text" name="" id="nameInput">
+                        <div><button  id="getInfo">Get Info</button></div>
+                    </div>
+                    </form>
+                </div>
+               
+            </div>
+            <div class="responses">
+          <h1>Responses</h1>
+        <div id="responses2">
+
+        </div>
+            </div>
+       
+    </div>
+    <div class="responses" id="responsesDiv">
+        <h1>Responses for Table</h1>
+    </div>
+    <script src="./index.js"></script> 
+</body>
+</html>
