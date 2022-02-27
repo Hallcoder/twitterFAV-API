@@ -9,7 +9,7 @@ let screenName = document.getElementById("nameInput");
 
 getTweetsfunc.addEventListener("click", getTweets);
 function getTweets(e) {
-  fetch("properties.json")
+  fetch("https://tweet-favorites.herokuapp.com/tweets")
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responses2");
@@ -30,7 +30,7 @@ function getTweets(e) {
 
 getUsersfunc.addEventListener("click", getUsers);
 function getUsers(e) {
-  fetch("properties.json")
+  fetch("https://tweet-favorites.herokuapp.com/users")
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responses2");
@@ -51,7 +51,7 @@ function getTweetDetails(e) {
   let err = new Error();
   let formInput = document.getElementById("IdFormInput");
   let realinput = formInput.value;
-  fetch("properties.json")
+  fetch("https://tweet-favorites.herokuapp.com/tweet/:id")
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responsesDiv");
@@ -83,7 +83,7 @@ function getTweetDetails(e) {
 getInfofunc.addEventListener("click", getInfo);
 function getInfo(e) {
     let nameInputted = screenName.value
-  fetch("properties.json")
+  fetch("https://tweet-favorites.herokuapp.com/tweet/:screen_name")
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responsesDiv");
@@ -113,7 +113,7 @@ function getInfo(e) {
 
 getLinksfunc.addEventListener("click", getLinks);
 function getLinks(e) {
-  fetch("properties.json")
+  fetch("https://tweet-favorites.herokuapp.com/links")
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responses2");
@@ -135,8 +135,8 @@ function getLinks(e) {
   e.preventDefault();
 }
 
-getUsersfunc.addEventListener("click", getUsers);
-function getUsers(e) {
+getUserfunc.addEventListener("click", getUser);
+function getUser(e) {
   fetch("properties.json")
     .then((res) => res.json())
     .then((data) => {
