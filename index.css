@@ -1,0 +1,108 @@
+body{
+    background-image: url("./imgs/back.png");
+    background-repeat:no-repeat;
+    
+}
+#topMost{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100%;
+}
+.responses{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height:38em;
+    border: 2px solid grey;
+    border-radius: 8px;
+    box-shadow: 4px 4px 3px black;
+    overflow: scroll;
+}
+#containerDiv{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 70vh;
+    margin: auto;
+    border:2px solid grey;
+    justify-content: space-around;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    border-radius: 8px;
+    box-shadow: 4px 4px 3px black;
+}
+strong,h1{
+    color:rgb(97, 27, 163);
+    text-decoration: 2px solid dotted;
+    text-align: center;
+}
+#requests{
+    display: flex;
+    flex-direction: column;
+    border:8px solid whitesmoke;
+    box-shadow: 2px 2px 2px black;
+    width: 50%;
+    align-items: center;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+}
+#instructions{
+    display: flex;
+    flex-direction: column;
+    border:8px solid whitesmoke;
+    box-shadow: 2px 2px 2px black;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 40px;
+    border-radius: 8px;  
+}
+#getTweets,#getUsers,#getTweetDetails,#getLinks,#getInfo,#postTweet{
+   width: 100px;
+   height: 40px;
+   font-size: 0.9em;
+   color:rgb(105, 36, 170);
+   background-color: white;
+   border-radius: 7px;  
+   margin: 10px auto 5px auto;
+}
+.buttonsGroup{
+   width: fit-content;
+   border:2px solid rgb(105, 36, 170);
+   border-radius: 2px ;
+}
+#buttonsInputs{
+display: flex;
+    flex-direction: column;
+    border:8px solid whitesmoke;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    line-height: 15px;
+}
+input{
+   width: 220%;
+   height: 30px;
+   border: 1px solid rgb(97, 27, 163);
+   border-radius: 6px;
+}
+ol,ul{
+   font-size: larger;
+   color:black;
+   border-bottom: 2px solid black;
+}
+#responsesDiv{
+   margin:20px auto ;
+   overflow: scroll;
+   height: 40em;
+}
+tr,td{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+/* border:2px solid grey;
+border-collapse: collapse; */
+width:100%;
+}
