@@ -69,7 +69,7 @@
             line-height: 40px;
             border-radius: 8px;  
         }
-       #getTweets,#getUsers,#getTweetDetails,#getLinks,#getInfo{
+       #getTweets,#getUsers,#getTweetDetails,#getLinks,#getInfo,#postTweet{
            width: 100px;
            height: 40px;
            font-size: 0.9em;
@@ -82,11 +82,6 @@
            width: fit-content;
            border:2px solid rgb(105, 36, 170);
            border-radius: 2px ;
-       }
-       .buttonsGroup:hover{
-        color:white;
-           background-color: rgb(178, 133, 221);
-          
        }
        #buttonsInputs{
         display: flex;
@@ -143,14 +138,14 @@
                     <h1>Tweet API</h1>
                     <form action="">
                         <div id="buttonsInputs">
-                        <div><button  class="buttonsGroup" id="getTweets">Get Tweets</button></div>
-                        <div><button  class="buttonsGroup" id="getUsers">Get Users</button></div>
-                        <div><button  class="buttonsGroup" id="getLinks">Get Links</button></div>
+                        <div><button   id="getTweets">Get Tweets</button></div>
+                        <div><button   id="getUsers">Get Users</button></div>
+                        <div><button   id="getLinks">Get Links</button></div>
                         <input type="text" name="id" id="IdFormInput">
-                        <div><button   class="buttonsGroup" id="getTweetDetails">Get Tweet Details</button></div>
+                        <div><button    id="getTweetDetails">Get Tweet Details</button></div>
                         <input type="text" name="" id="nameInput">
-                        <div><button  class="buttonsGroup" id="getInfo">Get Info</button></div>
-                        <div><a><button  class="buttonsGroup" id="postTweet">Post Tweet</button></a></div>
+                        <div><button   id="getInfo">Get Info</button></div>
+                        <div><a><button   id="postTweet">Post Tweet</button></a></div>
                     </div>
                     </form>
                 </div>
