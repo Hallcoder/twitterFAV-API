@@ -17,7 +17,7 @@ function getTweets(e) {
       data.forEach((tweet) => {
         result += `
             <ul>
-            <li>Created at:${tweet.created_at}</li>
+            <li>Created at:${tweet.createTime}</li>
             <li>ID:${tweet.id}</li>
             <li>Text:${tweet.text}</li>
             </ul>
