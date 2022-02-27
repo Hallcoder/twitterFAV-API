@@ -64,7 +64,7 @@ function getTweetDetails(e) {
         </table>`;
       for (property in data) {
         result += `
-       <table class='table .table-bordered>
+       <table class='table .table-bordered'>
        <tr><td>${property}</td>
      <td> ${data[property]}</td></tr>
        </table>
