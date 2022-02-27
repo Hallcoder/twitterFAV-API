@@ -8,8 +8,8 @@ let screenName = document.getElementById("nameInput");
 
 
 getTweetsfunc.addEventListener("click", getTweets);
-function getTweets(e) {
-  fetch("https://tweet-favorites.herokuapp.com/tweets")
+async function getTweets(e) {
+  await  fetch("https://tweet-favorites.herokuapp.com/tweets")
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responses2");
@@ -38,7 +38,7 @@ function getUsers(e) {
       data.forEach((tweet) => {
         result += `
             <ul>
-            <li>User:${tweet.user.description}</li>
+            <li>User:${tweet.description}</li>
             </ul>
             `;
       });
