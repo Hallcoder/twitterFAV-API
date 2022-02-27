@@ -51,7 +51,8 @@ function getTweetDetails(e) {
   let err = new Error();
   let formInput = document.getElementById("IdFormInput");
   let realinput = formInput.value;
-  fetch("https://tweet-favorites.herokuapp.com/tweet/:id")
+  let URL = "https://tweet-favorites.herokuapp.com/tweet/" + realinput
+  fetch(URL)
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responsesDiv");
@@ -62,20 +63,15 @@ function getTweetDetails(e) {
         <th>Value</th>
         </tr>
         </table>`;
-      data.forEach((tweet) => {
-        if (tweet.id == realinput) {
-          for (detail in tweet) {
-            result += `
-                       <table class='table .table-bordered'>
-                      <tr>
-                      <td>${detail}</td>
-                      <td>${tweet[detail]}</td>
-                        </tr>
-                       </table>
-                        `;
-          }
-        }
-      });
+     for(property in data){
+       result += `
+       <table>
+       <tr>${property}</tr>
+       <tr>${data[property]}</tr>
+       </table>
+       
+       `
+     }
       response.innerHTML = result;
     });
   e.preventDefault();
