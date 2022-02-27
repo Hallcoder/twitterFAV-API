@@ -151,24 +151,24 @@ function getUser(e) {
     });
   e.preventDefault();
 }
-let postTweet = document.getElementById("postTweet").addEventListener('submit')
-getTweetsfunc.addEventListener("click", getTweets);
-function getTweets(e) {
-  fetch("https://tweet-favorites.herokuapp.com/tweets")
-    .then((res) => res.json())
-    .then((data) => {
-      let response = document.getElementById("responses2");
-      let result = `<h2>Tweets</h2>`;
-      data.forEach((tweet) => {
-        result += `
-            <ul>
-            <li>Created at:${tweet.CreateTime}</li>
-            <li>ID:${tweet.id}</li>
-            <li>Text:${tweet.text}</li>
-            </ul>
-            `;
-      });
-      response.innerHTML = result;
-    });
-  e.preventDefault();
-}
+// let postTweet = document.getElementById("postTweet").addEventListener('submit')
+// getTweetsfunc.addEventListener("click", getTweets);
+// function getTweets(e) {
+//   fetch("https://tweet-favorites.herokuapp.com/tweets")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       let response = document.getElementById("responses2");
+//       let result = `<h2>Tweets</h2>`;
+//       data.forEach((tweet) => {
+//         result += `
+//             <ul>
+//             <li>Created at:${tweet.CreateTime}</li>
+//             <li>ID:${tweet.id}</li>
+//             <li>Text:${tweet.text}</li>
+//             </ul>
+//             `;
+//       });
+//       response.innerHTML = result;
+//     });
+//   e.preventDefault();
+// }
