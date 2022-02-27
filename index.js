@@ -151,7 +151,7 @@ function getUser(e) {
     });
   e.preventDefault();
 }
-// let postTweet = document.getElementById("postTweet").addEventListener('submit')
+ //let postTweet = document.getElementById("postTweet").addEventListener('submit')
 // getTweetsfunc.addEventListener("click", getTweets);
 // function getTweets(e) {
 //   fetch("https://tweet-favorites.herokuapp.com/tweets")
@@ -172,3 +172,9 @@ function getUser(e) {
 //     });
 //   e.preventDefault();
 // }
+let postTweet = document.getElementById("postTweet").addEventListener('click',getPostFile)
+
+function getPostFile(){
+
+  fetch()
+}
