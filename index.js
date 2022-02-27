@@ -8,8 +8,8 @@ let screenName = document.getElementById("nameInput");
 
 
 getTweetsfunc.addEventListener("click", getTweets);
-async function getTweets(e) {
-  await  fetch("https://tweet-favorites.herokuapp.com/tweets")
+ function getTweets(e) {
+   fetch("https://tweet-favorites.herokuapp.com/tweets")
     .then((res) => res.json())
     .then((data) => {
       let response = document.getElementById("responses2");
