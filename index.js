@@ -5,6 +5,7 @@ let getInfofunc = document.getElementById("getInfo");
 let getLinksfunc = document.getElementById("getLinks");
 let idForm = document.getElementById("idFormInput");
 let screenName = document.getElementById("nameInput");
+let getUserfunc = document.getElementById("getUsers");
 
 getTweetsfunc.addEventListener("click", getTweets);
 function getTweets(e) {
