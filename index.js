@@ -189,5 +189,9 @@ let text = document.getElementById("textPost").value;
     body:JSON.stringify({text:text}),
   })
   .then(res =>res)
-  .then(data => console.log(data[tweet]));
+  .then(data => {
+    for(prop in data){
+      console.log(data[prop])
+    }
+  });
 }
