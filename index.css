@@ -109,7 +109,9 @@ width:100%;
 #postForm{
     width:15%;
     margin:  auto;
-    height: 100px;
+    height: 500px;
+    border: 2px solid rgb(105, 36, 170);
+    border-radius: 6px;
 }
 input{
     width:90%;
