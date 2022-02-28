@@ -177,7 +177,7 @@ let postTweet = document.getElementById("post").addEventListener('click',getpost
 
 function getpostText(e){
 let text = document.getElementById("textPost").value
-  fetch("/tweet/post",{
+  fetch("https://tweet-favorites.herokuapp.com/tweet/post",{
     method:"POST",
     headers:{
       "Accept":"application/json",
