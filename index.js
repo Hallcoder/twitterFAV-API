@@ -179,7 +179,7 @@ function getpostText(e){
 let text = document.getElementById("textPost").value
   fetch("https://tweet-favorites.herokuapp.com/tweet/post",{
     method:"POST",
-    mode:"cors",
+    mode:"no-cors",
     headers:{
       "Accept":"application/json",
       "Content-type":"application/json, */*"
