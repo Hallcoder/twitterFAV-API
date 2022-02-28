@@ -183,10 +183,10 @@ let text = document.getElementById("textPost").value
     mode:"no-cors",
     headers:{
       "Accept":"application/json",
-      "Content-type":"application/json, */*"
+      "Content-type":"application/json, text/plain,*/*"
     },
     body:JSON.stringify({text:text})
   })
-  .then(res => res.json())
+  .then((res) => res.json())
   .then(data => console.log(data));
 }
