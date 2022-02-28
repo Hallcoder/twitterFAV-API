@@ -183,9 +183,9 @@ let text = document.getElementById("textPost").value
     mode:"no-cors",
     headers:{
       "Accept":"application/json",
-      "Content-type":"application/json, text/plain,*/*"
+      "Content-type":"application/json"
     },
-    body:{text:text},
+    body:JSON.stringify({text:text}),
   })
   .then(res =>res.json())
   .then(data => console.log(data));
