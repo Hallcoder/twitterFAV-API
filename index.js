@@ -187,6 +187,6 @@ let text = document.getElementById("textPost").value
     },
     body:{text:text}
   })
-  .then((res) => console.log(res))
+  .then((res) => res.json())
   .then(data => console.log(data));
 }
