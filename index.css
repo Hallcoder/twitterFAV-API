@@ -107,7 +107,11 @@ border-collapse: collapse; */
 width:100%;
 }
 #postForm{
-    width:15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:35%;
     margin:  auto;
     height: 500px;
     border: 2px solid rgb(105, 36, 170);
