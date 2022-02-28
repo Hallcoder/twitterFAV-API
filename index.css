@@ -117,7 +117,7 @@ width:100%;
     border: 2px solid rgb(105, 36, 170);
     border-radius: 6px;
 }
-input{
+textarea{
     width:90%;
     margin: auto;
 }

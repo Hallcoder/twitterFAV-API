@@ -172,9 +172,18 @@ function getUser(e) {
 //     });
 //   e.preventDefault();
 // }
-let postTweet = document.getElementById("postTweet").addEventListener('click',getPostFile)
+let postTweet = document.getElementById("post").addEventListener('click',getpostText)
 
-function getPostFile(){
-
-  fetch()
+function getpostText(){
+let text = document.getElementById("textPost").value
+  fetch("/tweet/post",{
+    method:"POST",
+    headers:{
+      "Accept":"application/json",
+      "Content-type":"application/json","*/*",
+    },
+    body:JSON.stringify({text:text})
+  })
+  .then(req => req.json())
+  .then(data => console.log(data))
 }
