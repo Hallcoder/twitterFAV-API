@@ -107,8 +107,11 @@ border-collapse: collapse; */
 width:100%;
 }
 #postForm{
-    width:30%;
+    width:15%;
     margin:  auto;
     height: 60px;
-    
+}
+input{
+    width:90%;
+    margin: auto;
 }
