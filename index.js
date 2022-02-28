@@ -180,7 +180,7 @@ let text = document.getElementById("textPost").value
     method:"POST",
     headers:{
       "Accept":"application/json",
-      "Content-type":"application/json","*/*",
+      "Content-type":"application/json, */*"
     },
     body:JSON.stringify({text:text})
   })
