@@ -175,7 +175,7 @@ function getUser(e) {
 // }
 let postTweet = document.getElementById("post").addEventListener('click',getpostText)
 
-function getpostText(){
+function getpostText(e){
 let text = document.getElementById("textPost").value
   fetch("/tweet/post",{
     method:"POST",
@@ -187,4 +187,5 @@ let text = document.getElementById("textPost").value
   })
   .then(req => req.json())
   .then(data => console.log(data))
+  e.preventDefault()
 }
