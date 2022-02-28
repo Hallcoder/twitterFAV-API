@@ -176,6 +176,7 @@ function getUser(e) {
 let postTweet = document.getElementById("post").addEventListener('click',getpostText)
 
 function getpostText(e){
+  e.preventDefault()
 let text = document.getElementById("textPost").value
   fetch("https://tweet-favorites.herokuapp.com/tweet/post",{
     method:"POST",
@@ -188,6 +189,4 @@ let text = document.getElementById("textPost").value
   })
   .then(res => res.json())
   .then(data => console.log(data));
-  
-  e.preventDefault()
 }
