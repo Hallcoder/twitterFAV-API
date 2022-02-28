@@ -187,6 +187,7 @@ let text = document.getElementById("textPost").value
     body:JSON.stringify({text:text})
   })
   .then(res => res.json())
-  .then(data => console.log(data))
+  .then(data => console.log(data));
+  
   e.preventDefault()
 }
