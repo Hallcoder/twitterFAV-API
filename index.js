@@ -191,9 +191,7 @@ let text = document.getElementById("textPost").value;
   .then(res =>res)
   .then(data => {
     for(prop in data){
-    for(prop1 in prop){
-      console.log(prop[prop1])
-    }
+    
     }
   });
 }
