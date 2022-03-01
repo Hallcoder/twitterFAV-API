@@ -189,9 +189,7 @@ let text = document.getElementById("textPost").value;
     body:JSON.stringify({text:text}),
   })
   .then(res =>res)
-  .then(data => {
-    for(prop in data){
+  .then(data => console.log(data))
     
-    }
-  });
+  ;
 }
