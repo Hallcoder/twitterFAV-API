@@ -177,18 +177,17 @@ let postTweet = document.getElementById("post").addEventListener('click',getpost
 
 function getpostText(e){
   e.preventDefault();
-let text = document.getElementById("textPost").value;
+let text = document.getElementById("textPost");
 
   fetch("https://tweet-favorites.herokuapp.com/tweet/post",{
     method:"POST",
-    mode:"no-cors",
     headers:{
       "Accept":"application/json",
       "Content-type":"application/json"
     },
-    body:JSON.stringify({text:text}),
+    body:JSON.stringify({text:text.value}),
   })
-  .then(res =>res)
+  .then(res =>res.json())
   .then(data => console.log(data))
     
   ;
