@@ -188,8 +188,8 @@ let text = document.getElementById("textPost").value;
     },
     body:JSON.stringify({text:text}),
   })
-  .then(res =>res)
-  .then(data => console.log(data))
+  .then(res =>console.log(res))
+  //.then(data => console.log(data))
     
   ;
 }
