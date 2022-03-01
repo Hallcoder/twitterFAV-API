@@ -186,7 +186,7 @@ let text = document.getElementById("textPost").value;
       "Accept":"application/json",
       "Content-type":"application/json"
     },
-    body:JSON.parse({text:text}),
+    body:JSON.stringify({text:text}),
   })
   .then(res =>res)
   .then(data => console.log(data))
